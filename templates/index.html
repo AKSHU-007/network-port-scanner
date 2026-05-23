@@ -2,12 +2,17 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cyber Security Port Scanner</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet"
-    href="{{ url_for('static', filename='style.css') }}">
+<title>CyberScan Pro</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static',filename='style.css') }}">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
 </head>
 
 <body>
@@ -16,26 +21,37 @@
 
 <div class="container">
 
-    <h1>🛡 Cyber Security Port Scanner</h1>
+<div class="logo">
+<i class="fas fa-shield-halved"></i>
+<h1>CyberScan Pro</h1>
+</div>
 
-    <p class="subtitle">
-        Scan common ports and detect active services
-    </p>
+<p class="subtitle">
+Professional Network Security Scanner
+</p>
 
-    <div class="input-box">
+<div class="searchBox">
 
-        <input
-        type="text"
-        id="target"
-        placeholder="Enter IP Address or Domain">
+<input
+type="text"
+id="target"
+placeholder="Enter IP or Domain">
 
-        <button onclick="scanPorts()">
-            Scan
-        </button>
+<button onclick="scanPorts()">
+<i class="fas fa-radar"></i>
+Scan
+</button>
 
-    </div>
+</div>
 
-    <div id="result"></div>
+<div class="progressContainer">
+
+<div class="progressBar"
+id="progressBar"></div>
+
+</div>
+
+<div id="result"></div>
 
 </div>
 
@@ -43,4 +59,5 @@
 filename='script.js') }}"></script>
 
 </body>
+
 </html>
