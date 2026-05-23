@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Security Port Scanner</title>
+
+    <link rel="stylesheet"
+    href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="background"></div>
+
+<div class="container">
+
+    <h1>🛡 Cyber Security Port Scanner</h1>
+
+    <p class="subtitle">
+        Scan common ports and detect active services
+    </p>
+
+    <div class="input-box">
+
+        <input
+        type="text"
+        id="target"
+        placeholder="Enter IP Address or Domain">
+
+        <button onclick="scanPorts()">
+            Scan
+        </button>
+
+    </div>
+
+    <div id="result"></div>
+
+</div>
+
+<script src="{{ url_for('static',
+filename='script.js') }}"></script>
+
+</body>
+</html>
